@@ -1,8 +1,9 @@
 #include "Task.h"
 
-Task::Task(int id, const std::string& description, time_t dueDate) \
-	: id(id), description(description), dueDate(dueDate), isCompleted(false) {}
+#include <iostream>
 
+Task::Task(int id, const std::string& description, time_t dueDate, bool isCompleted) \
+	: id(id), description(description), dueDate(dueDate), isCompleted(isCompleted) {}
 
 int Task::getId() const
 {
@@ -14,7 +15,7 @@ time_t Task::getDueDate() const
 	return dueDate;
 }
 
-bool Task::getIsComplited() const
+bool Task::getIsCompleted() const
 {
 	return isCompleted;
 }
@@ -44,3 +45,8 @@ void Task::setDescription(const std::string& description)
 	this->description = description;
 }
 
+std::ostream& operator<<(std::ostream& os, const Task& task)
+{
+	os << task.getId() << "\n" << task.getDescription() << "\n" << task.getDueDate() << "\n" << (task.getIsCompleted() ? "Yes" : "No") << "\n";
+	return os;
+}

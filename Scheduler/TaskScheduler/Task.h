@@ -2,6 +2,8 @@
 
 #define TASK_H
 
+
+#include <iostream>
 #include <string>
 #include <ctime>
 
@@ -13,12 +15,12 @@ private:
 	std::string description;
 
 public:
-	Task(int id, const std::string& description, time_t dueDate);
+	Task(int id, const std::string& description, time_t dueDate, bool isCompleted = false);
 
 	// Getters
 	int getId() const;
 	time_t getDueDate() const;
-	bool getIsComplited() const;
+	bool getIsCompleted() const;
 	std::string getDescription() const;
 
 	// Setters
@@ -27,4 +29,7 @@ public:
 	void setIsCompleted(const bool isCompleted);
 	void setDescription(const std::string& description);
 };
+
+std::ostream& operator<<(std::ostream& os, const Task& task);
+
 #endif

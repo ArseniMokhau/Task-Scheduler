@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\CPP projects\Scheduler\x64\Debug\TaskScheduler.exe</FullPath>
+      <FullPath>D:\Github\Task-Scheduler\Scheduler\x64\Debug\TaskScheduler.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

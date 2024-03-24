@@ -17,4 +17,8 @@ void removeTask(std::vector<Task>& tasks, int taskId);
 
 void resetIds(std::vector<Task>& tasks);
 
+void saveTaskToFile(const std::vector<Task>& tasks, const std::string& filename);
+
+void loadTaskFromFile(std::vector<Task>& tasks, const std::string& filename);
+
 #endif
