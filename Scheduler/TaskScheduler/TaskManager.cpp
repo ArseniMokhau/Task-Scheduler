@@ -1,5 +1,5 @@
 #include "TaskManager.h"
-
+#include "TimeUtils.h"
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -21,7 +21,7 @@ void viewTasks(const std::vector<Task>& tasks) {
 	std::cout << std::string(65, '-') << std::endl;
 
 	for (const Task& task : tasks) {
-		std::cout << std::setw(5) << task.getId() << std::setw(25) << task.getDescription() << std::setw(20) << task.getDueDate() << std::setw(15) << (task.getIsCompleted()  ? "Yes" : "No") << std::endl;
+		std::cout << std::setw(5) << task.getId() << std::setw(25) << task.getDescription() << std::setw(20) << convertTimeTToString(task.getDueDate()) << std::setw(15) << (task.getIsCompleted()  ? "Yes" : "No") << std::endl;
 	}
 }
 
@@ -124,3 +124,4 @@ void loadTaskFromFile(std::vector<Task>& tasks, const std::string& filename)
 		return;
 	}
 }
+

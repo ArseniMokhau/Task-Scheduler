@@ -21,4 +21,6 @@ void saveTaskToFile(const std::vector<Task>& tasks, const std::string& filename)
 
 void loadTaskFromFile(std::vector<Task>& tasks, const std::string& filename);
 
+std::string convertTimeTToString(time_t time);
+
 #endif
